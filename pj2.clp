@@ -215,6 +215,98 @@
 	(send ?ins2 put-concern oil_control)
 )
 
+;;new rule
+(defrule kiehl
+?ins2<-(object(is-a PREFER)(concern winkle)(price_range 1)
+=>
+(printout t "Recommended cusmetic brand: Kiehl's anti aging series" crlf)
+)
+
+(defrule lancom
+?ins2<-(object(is-a PREFER)(concern winkle)(price_range 2)
+=>
+(printout t "Recommended cusmetic brand: Lancom" crlf)
+)
+
+(defrule lap
+?ins2<-(object(is-a PREFER)(concern winkle)(price_range 2)
+=>
+(printout t "Recommended cusmetic brand: La Prairie " crlf)
+)
+
+(defrule acnefree
+?ins2<-(object(is-a PREFER)(concern acne)(price_range 1)
+=>
+(printout t "Recommended cusmetic brand: acnefree " crlf)
+)
+
+(defrule lar
+?ins2<-(object(is-a PREFER)(concern acne)(price_range 2)
+=>
+(printout t "Recommended cusmetic brand: la roche " crlf)
+)
+
+(defrule lamer
+?ins2<-(object(is-a PREFER)(concern acne)(price_range 3)
+=>
+(printout t "Recommended cusmetic brand: la mer " crlf)
+)
+
+(defrule firstaid
+?ins2<-(object(is-a PREFER)(concern mois)(price_range 1)
+=>
+(printout t "Recommended cusmetic brand: First Aid Beauty " crlf)
+)
+
+(defrule phil
+?ins2<-(object(is-a PREFER)(concern mois)(price_range 2)
+=>
+(printout t "Recommended cusmetic brand: Philosophy" crlf)
+)
+
+(defrule sisley
+?ins2<-(object(is-a PREFER)(concern mois)(price_range 3)
+=>
+(printout t "Recommended cusmetic brand: Sisley " crlf)
+)
+
+(defrule clean
+?ins2<-(object(is-a PREFER)(concern oil_control)(price_range 1)
+=>
+(printout t "Recommended cusmetic brand: clean&clear" crlf)
+)
+
+(defrule shesi
+?ins2<-(object(is-a PREFER)(concern oil_control)(price_range 2)
+=>
+(printout t "Recommended cusmetic brand:shiseido" crlf)
+)
+
+(defrule quasar
+?ins2<-(object(is-a PREFER)(concern oil_control)(price_range 3)
+=>
+(printout t "Recommended cusmetic brand: Baby Quasar Blue light" crlf)
+)
+
+(defrule ceraV
+?ins2<-(object(is-a PREFER)(concern irritation)(price_range 1)
+=>
+(printout t "Recommended cusmetic brand: ceraVare" crlf)
+)
+
+(defrule ki_irri
+?ins2<-(object(is-a PREFER)(concern irritation)(price_range 2)
+=>
+(printout t "Recommended cusmetic brand: Kiehl's tiger grass serial" crlf)
+)
+
+(defrule sis_irri
+?ins2<-(object(is-a PREFER)(concern irritation)(price_range 3)
+=>
+(printout t "Recommended cusmetic brand: Sisley" crlf)
+)
+
+
 
 (defrule print-instance (declare (salience -10))
 (object (is-a CUSTOMER)(cname ?nm) (daily_environment ?de)(skin_type ?st))
